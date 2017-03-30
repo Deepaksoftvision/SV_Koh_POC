@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Glady AutF_AllureParallel" thread-count="5" parallel="methods"
+	data-provider-thread-count="5">
+	<listeners>
+		<listener class-name="listeners.AllureListener"></listener>
+	</listeners>
+
+	<test name="GoogleChrome">
+		<parameter name="browser" value="Chrome"></parameter>
+		<parameter name="url"
+			value="https://learn.oneplm.kohls.com/TradeEngines/"></parameter>
+		<classes>
+			<class name="tests.TechSpecPageTests" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
